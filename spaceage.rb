@@ -62,7 +62,7 @@ module Question
   # All these methods are the same, so lets define them with a loop:
   ["venus", "mars", "jupiter", "saturn", "uranus", "neptune"].each do |planet|
     define_method("how_old_am_i_on_#{planet}?".to_sym) do
-      @seconds.send("to_#{planet}_years")
+      @seconds.send "to_#{planet}_years"
     end
   end
 
